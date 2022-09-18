@@ -12,7 +12,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost:27017/todoListDB");
-//mongoose.connect("mongodb+srv://test1:Test123@cluster1.pmxl4rk.mongodb.net/todoListDB")
 
 const itemsSchema = {
   name: String
@@ -117,9 +116,6 @@ app.get("/:customListName", function(req, res){
     }
   });
 });
-// app.get("/about", function(req, res){
-//   res.render("about");
-// });
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
